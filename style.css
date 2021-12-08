@@ -1,0 +1,223 @@
+body {
+font-family: "Montserrat", "Helvetica", "Times New Roman", sans-serif;/*шрифт*/
+font-size: 16px; /* размер шрифта*/
+/*фон*/
+background-image:url("https://catherineasquithgallery.com/uploads/posts/2021-02/1613629692_33-p-fon-dlya-prezentatsii-puteshestvie-39.jpg")
+
+}
+/* меню*/
+#navbar ul{
+        display: none;
+        background-color: #f90;
+        position: absolute;
+        top: 100%;
+      }
+      #navbar li:hover ul { display: block; }
+      #navbar, #navbar ul{
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+      }
+      #navbar {
+        height: 30px;
+        background-color: #666;
+        padding-left: 25px;
+        min-width: 200px;
+      }
+      #navbar li {
+        float: left;
+        position: relative;
+        height: 100%;
+      }
+      #navbar li a {
+        display: block;
+        padding: 6px;
+        width: 100px;
+        color: #fff;
+        text-decoration: none;
+        text-align: center;
+      }
+      #navbar ul li { float: none; }
+      #navbar li:hover { background-color: #f90; }
+      #navbar ul li:hover { background-color: #666; }
+/*отступ заголовка страницы */
+.heading {
+float:left;
+}
+.reviews-list{
+margin-left:17%;
+}
+/* отступы для логотипа*/
+.logo{
+float:left;
+margin-left:5%;
+width:300px;
+/* номер телефона*/
+.number{
+font-size:40px;
+float:right;
+margin-right:5%;
+margin-top:45px;
+}
+
+/* параметры*/
+text-align: right;
+padding-top:10px;
+margin-right:70px;
+margin-bottom:70px;
+}
+/* отступы для блока о консультанте*/
+.cons{
+	padding: 30px;
+}
+.tour{
+padding:30px;
+
+}
+
+/* отступы для полей ввода*/
+.feedback-form-group {
+	padding: 10px 0;
+}
+
+/* поле при наведении*/
+.feedback-form input[type="text"]:hover,
+.feedback-form select:hover,
+.feedback-form textarea:hover {
+	border-color: #bebebe;
+}
+/* отступ кнопки "Подписаться"*/
+.btn{
+	margin: 20px;
+}
+/* кнопка наверх и ее стиль */
+.topbutton {
+	border:2px;
+	text-align:center;
+	padding:10px;
+	position:fixed;
+	bottom:50px;
+	right:50px;
+	color:#333;
+	font-size:12px;
+	border-radius: 5px;
+}
+
+/*оформление фона и стилей для слайдера */
+.wrapper {
+	height: 350px;
+	margin: 100px auto 0;
+	position: relative;
+	width: 1200px;
+}
+/* параметры для слайдеров*/
+.slider {
+	background-color: indianred;
+	height: inherit;
+	overflow: hidden;
+	position: relative;
+	width: inherit;
+	-webkit-box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+	-moz-box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+	-o-box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+	box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+}
+/*общие стили для слайдеров */
+.slides {
+	height: 200px;
+	position: absolute;
+	width: 200px;
+}
+/*изображение к слайдам*/
+.slide1 { background-image: url('img/slide1.jpg');}
+.slide2 { background-image: url('img/slide2.jpg');}
+.slide3 { background-image: url('img/slide3.jpg');}
+
+/*навигация по слайдам */
+.wrapper .controls {
+	left: 50%;
+	margin-left: -98px;
+	position: absolute;
+}
+/* переход по слайдам */
+.wrapper label {
+	cursor: pointer;
+	display: inline-block;
+	height: 8px;
+	margin: 25px 12px 0 16px;
+	position: relative;
+	width: 8px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+
+}
+/* кнопки для переключения*/
+.wrapper label:after {
+	border: 2px solid crimson;
+	content: " ";
+	display: block;
+	height: 12px;
+	left: -4px;
+	position: absolute;
+	top: -4px;
+	width: 12px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+
+}
+.wrapper label {
+	cursor: pointer;
+	display: inline-block;
+	height: 8px;
+	margin: 25px 12px 0 16px;
+	position: relative;
+	width: 8px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+	-webkit-transition: background ease-in-out .5s;
+	-moz-transition: background ease-in-out .5s;
+	-o-transition: background ease-in-out .5s;
+	transition: background ease-in-out .5s;
+}
+
+.wrapper label:hover,
+#slide1:checked ~ .controls label:nth-of-type(1),
+#slide2:checked ~ .controls label:nth-of-type(2),
+#slide3:checked ~ .controls label:nth-of-type(3) {
+	background: lightcoral;
+
+}
+/* переключение слайдеров */
+.slides {
+	height: inherit;
+	opacity: 0;
+
+	position: absolute;
+	width: inherit;
+	z-index: 0;
+	-webkit-transform: scale(1.5);
+	-moz-transform: scale(1.5);
+	-o-transform: scale(1.5);
+	transform: scale(1.5);
+	-webkit-transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+	-moz-transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+	-o-transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+	transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+}
+/* порядок следования слайдов */
+#slide1:checked ~ .slider > .slide1,
+#slide2:checked ~ .slider > .slide2,
+#slide3:checked ~ .slider > .slide3 {
+	opacity: 1;
+	z-index: 1;
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);}
+
